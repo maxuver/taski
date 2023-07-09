@@ -1,13 +1,22 @@
+# import os
 from pathlib import Path
+
+
+# from dotenv import load_dotenv
+
+# load_dotenv()
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# SECRET_KEY = os.getenv('SECRET_KEY')
 
 SECRET_KEY = 'django-insecure-j_89af+30&&4qm*8z9_(^zz8p4-ho8z_m6ylm0s$h!-p@on1_^'
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['158.160.76.223', '127.0.0.1', 'localhost', 'patsyuk.servemp3.com']
+
 
 
 # Application definition
@@ -103,7 +112,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static_backend/'
+
+STATIC_ROOT = BASE_DIR / 'static_backend'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -113,3 +124,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000'
 ]
+
